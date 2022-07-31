@@ -20,6 +20,8 @@ It's a git repo as opposed to a blog post because the workarounds will inevitabl
 
 **TODO:** Some demonstration screenshots.
 
+**TODO:** Create the ultimate workaround - canvas-rendered true-bitmap fonts with a transparent text overlay (so you can still select text, etc.)
+
 ## The Basics
 
 I'm using the IBM VGA 8x16 font here as an example here. It's 16 pixels high, so I set the `font-size` accordingly. If you want your fonts to be larger, I recommend sticking to integer multiples of the original pixel size.
