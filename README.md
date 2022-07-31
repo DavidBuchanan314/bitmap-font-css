@@ -62,6 +62,8 @@ body {
 }
 ```
 
+(Unfortunately, I think this only works on OSX/iOS, for now. See https://caniuse.com/font-smooth)
+
 However, there are some cases where no anti-aliasing makes things look worse. For example, when a font is scaled by a non-integer ratio on a low-DPI display. As a workaround, I use CSS media queries to detect when the viewport is scaled by a non-integer amount:
 
 ```css
