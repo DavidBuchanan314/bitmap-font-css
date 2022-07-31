@@ -22,7 +22,7 @@ It's a git repo as opposed to a blog post because the workarounds will inevitabl
 
 ## The Basics
 
-I'm using the IBM VGA 8x16 font here as an example here. It's 16 pixels high, so I set the `font-size` accordingly. If you want your fonts to be larger, I recommend sticking to integer multiples of the orinal pixel size.
+I'm using the IBM VGA 8x16 font here as an example here. It's 16 pixels high, so I set the `font-size` accordingly. If you want your fonts to be larger, I recommend sticking to integer multiples of the original pixel size.
 
 The `line-height` property is also important. I set it to `1` so that ANSI art displays as intended - with no vertical gaps between the line-drawing characters. However for larger bodies of text, you might want a larger `line-height` for legibility reasons - if you do, I recommend sticking to integer pixel values.
 
