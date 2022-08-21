@@ -5,6 +5,7 @@ I love bitmap fonts. There are some great web-compatible bitmap fonts available.
  - https://int10h.org/oldschool-pc-fonts/
  - https://files.ax86.net/terminus-ttf/ (**TODO:** I love Terminus but this TTF conversion looks bad if you zoom in - One day I'll make my own, better conversion)
  - https://unifoundry.com/unifont/
+ - See also: https://int10h.org/blog/2018/05/flexi-ibm-vga-scalable-truetype-font/ - not a bitmap font, but it's the classic IBM VGA font hand-converted into a faithful vector representation, that scales nicely even with default font settings.
 
 Unfortunately, web browsers aren't built to handle bitmap fonts properly - the above fonts only work on the web when converted into a vector font format.
 
