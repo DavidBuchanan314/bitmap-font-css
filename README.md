@@ -84,3 +84,30 @@ However, there are some cases where no anti-aliasing makes things look worse. Fo
 ```
 
 There's one big caveat - this does not work on Safari. Firstly, Safari doesn't support the `dppx` unit, but that has workarounds such as `-webkit-device-pixel-ratio`. The real issue with Safari is that it "lies" and always reports the same pixel ratio, even when the viewport has been scaled. So on Safari, you get to pick between always-on and always-off. I prefer to leave anti-aliasing on, because it still looks *alright* on desktop Safari, wereas no anti-aliasing looks terrible on my iPhone SE.
+
+## Hack to disable Sub-Pixel AA:
+
+I discovered this hack to disable sub-pixel anti-aliasing, tested in Chrome and Firefox on Linux:
+
+```css
+filter: contrast(100.00001%);
+```
+
+(any non-default filter value works)
+
+## Hack to fix centering on odd-pixel-width viewports:
+
+When text is centered (e.g margin: auto) on a viewport of odd pixel width, the pixels get blurry. Here's a workaround - add this JS snippet at the end of the page body:
+
+```html
+		<script type="text/javascript">
+			fix_odd_viewport = () => {
+				document.body.style.width = "initial";
+				document.body.style.width = (document.body.clientWidth&~1)+"px";
+			}
+			addEventListener("resize", fix_odd_viewport);
+			fix_odd_viewport();
+		</script>
+```
+
+TODO: figure out how the above two hacks interact with the rest of the techniques on this page, and figure out the ultimate combo
